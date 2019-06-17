@@ -1,0 +1,28 @@
+<div> 
+  <h1>
+       Employees
+    </h1>
+   <table>
+  <thead>
+    <tr>
+      <th>First Name</th> <br>
+      <th>Last Name</th> <br>
+      <th>Gender</th> <br>
+      <th>Date Of birth</th> <br>
+      <th>Department</th> <br>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let d of resultData;">
+      <td>{{d.firstName}}</td> <br>
+      <td>{{d.lastName}}</td> <br>
+      <td>{{d.gender}}</td> <br>
+      <td>{{d.dateOfBirth |  date:"MM/dd/yyyy"}}</td> <br>
+      <td>{{d.department}}</td> <br>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+

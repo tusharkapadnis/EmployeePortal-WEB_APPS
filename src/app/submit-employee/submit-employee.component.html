@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <form [formGroup]="submitEmployeeForm">
+      <div class="form-container">
+        First Name: <input type="text" formControlName="firstName" name="firstName" [(ngModel)]="firstName"><br><br> 
+        <br>Last Name: <input type="text" formControlName="lastName" name="lastName" [(ngModel)]="lastName"><br><br>
+        <br>Gender: <select class='select-option' required [(ngModel)]='gender' (ngModelChange)='onOptionsSelected($event)' [ngModelOptions]="{standalone: true}"><br><br>
+        <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
+        </select><br><br>
+        <br>Date of birth: <input type="date" formControlName="dob" name="dob" [(ngModel)]="dob"><br><br>
+        <br>Department: <input type="text" formControlName="department" name="department" [(ngModel)]="department"><br><br>
+        <input type="submit" class="button" value="Submit Employee" (click)="submitEmployee()"><br>
+        <button class="button" routerLink="allEmployee">See All Employees</button>
+      </div>
+    </form>
+  </div>
+</div> 
